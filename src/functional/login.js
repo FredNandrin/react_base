@@ -1,26 +1,35 @@
 import React, {Component} from 'react';
 import '../scss/Login.scss';
-import { Link } from 'react-router-dom';
 
 
 class Login extends Component {
-    constructor(){
-        super();
-    };
-
-
-
 render() {
     return (
-        <div className="row" id="Body">sdfsdfsdf
+        <div className="row" id="Body">
             <div className="medium-5 columns left">
                 <h4>Login</h4>
-                <label>Username</label>
-                <input type="text" name="username" placeholder="Username" />
-                <label>Password</label>
-                <input type="password" name="password" placeholder="Password" />
-                <input type="submit" className="button success" value="Login" />
-                <a href="/signup">Registration</a>
+                <form>
+                    <div className="form-group">
+                        <label htmlFor="exampleInputEmail1">Email address</label>
+                        <input type="email" className="form-control" id="exampleInputEmail1"
+                               aria-describedby="emailHelp" placeholder="Enter email"  autoComplete="username"/>
+                            <small id="emailHelp" className="form-text text-muted">We'll never share your email with
+                                anyone else.
+                            </small>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="exampleInputPassword1">Password</label>
+                        <input type="password" className="form-control" id="exampleInputPassword1"
+                               placeholder="Password" autoComplete="current-password" />
+                    </div>
+                    <div className="form-group form-check">
+                        <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                            <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="signup" className="btn btn-primary">Registration</button>
+                </form>
+
             </div>
         </div>
     );

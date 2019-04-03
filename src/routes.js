@@ -63,8 +63,9 @@ class Routes extends Component {
     return(
       <div>
         <Router history={history} >
-        <div>
+            <div>
           <Header auth={auth} />
+            <div className="container">
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/form1' component={Form1} />
@@ -83,7 +84,8 @@ class Routes extends Component {
             <PrivateRoute path="/profile" auth={auth} component={Profile} />
 
           </Switch>
-        </div>
+            </div>
+            </div>
         </Router>
       </div>
     )}
